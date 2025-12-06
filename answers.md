@@ -52,6 +52,16 @@ The probability is <= O(logn/n).
 
 - 3b.
 
+Let Y(n) be the random number of comparisons quicksort makes on an array of size n. 
+
+$E[Y(n)]<=2nln n$
+
+We want $P[Y(n)=>10^cnlnn]$
+
+Using Markov's inequality:
+
+$P[Y(n)=>10^cnlnn] <= E[Y(n)]/10^cnlnn <= 2nlnn/10^cnlnn = 2/10^c$
+
 4. **Greedy Algorithms**
 
 5. **Dynamic Programming**
