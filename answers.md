@@ -43,9 +43,9 @@ Markov's inequality: for any non-negative random variable X and a>0
 
 $P[X=>a]<=E[X]/a$
 
-Take X=Y(n) and a=$cn^2$
+Take $X=Y(n) and a=cn^2$
 
-$P[Y(n)=>cn^2]<= E[Y(n)]/cn^2 <= 2nln/cn^2 = 2ln n/cn$
+$P[Y(n)=>cn^2]<= E[Y(n)]/cn^2 <= 2nln n/cn^2 = 2ln n//cn$
 
 The probability is <= O(logn/n).
 
