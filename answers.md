@@ -108,3 +108,22 @@ Optimal Binary Search Tree (OBST), from dp-03.
 Computing the minimum root candidate for each interval can be done in parallel with O(logn) span per interval, giving total span O(nlogn).
 
 6. **Graphs**
+
+
+Let T be the minimum spanning tree of G. 
+
+Suppose, for contradiction, that T contains the largest weight cycle C. 
+
+1. remove e from T. Since T is a tree, removing any edge disconnects it into two components. We can call the resulting sets A and B. 
+
+2. because e lies on the cycle C, there is another path in C between the same endpoints that avoids e. The path must contain at least one other edge f that goes from A to B (other wise we couldn't get from A to B)
+
+3. all edges on C have distinct weights and e is the heaviest on C, so w(f)< w(e)
+
+4. now consider T'=T-{e}+{f}
+   - T' is still a spanning tree (we removed one ege and added another one that reconnect the two components)
+   - the total weight is now
+
+   w(T')=w(T)-w(e)+w(f) < w(T)
+
+   So we have constructed a spanning tree lighter than T, contradicting the assumption that T was a minimum spanning tree. Therefore, our assumption was false.
