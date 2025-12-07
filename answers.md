@@ -64,6 +64,35 @@ $P[Y(n)=>10^cnlnn] <= E[Y(n)]/10^cnlnn <= 2nlnn/10^cnlnn = 2/10^c$
 
 4. **Greedy Algorithms**
 
+
+Greedy Choice Property: for any set of jobs, there exists an optimal schedule that begins with the job of smallest processing time.
+
+Proof: Let A be the set of jobs, G the greedy schedule that starts with the shortest job, and O some optimal schedule. 
+
+If O already starts with the shortest job, we are done. Otherwise, let j be the shortest job and suppose O begins with some job k!=j such that $p_k>p_j$
+
+Consider the first occurence of these two jobs in O, and suppose O contains the pair (k,j) in that order. 
+
+We construct schedule O' by swapping these two jobs. 
+
+The waiting time of all other jobs remains unchanged, the only change is:
+
+- In O
+   - k waits T time 
+   - j waits T + $p_k$
+- In O':
+   - j waits T time
+   - k waits T + $p_j$
+
+Therefore: 
+
+Total in $O =2T+p_k$
+
+Total in $O'=2T + p_j$
+
+Since $p_k>p_j$, the new schedule has lower total waiting time, contradicting the optimality of O. Therefore, O must start with job j, proving that the greedy choice is always part of some optimal schedule. 
+
+
 5. **Dynamic Programming**
 
 6. **Graphs**
