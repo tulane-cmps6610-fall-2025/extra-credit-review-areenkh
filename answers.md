@@ -95,4 +95,16 @@ Since $p_k>p_j$, the new schedule has lower total waiting time, contradicting th
 
 5. **Dynamic Programming**
 
+Maximum span (no parallelism):
+
+0–1 Knapsack, from dp-01.
+
+The dependency structure reduces the capacity by 1 at each recursive step, giving a longest path of length n, so the span is O(n).
+
+Polylogarithmic span (ideal parallelism):
+
+Optimal Binary Search Tree (OBST), from dp-03.
+
+Computing the minimum root candidate for each interval can be done in parallel with O(logn) span per interval, giving total span O(nlogn).
+
 6. **Graphs**
